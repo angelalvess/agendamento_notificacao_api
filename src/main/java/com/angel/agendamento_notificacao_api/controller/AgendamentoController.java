@@ -5,17 +5,22 @@ import com.angel.agendamento_notificacao_api.business.AgendamentoService;
 import com.angel.agendamento_notificacao_api.controller.dto.in.AgendamentoRecord;
 import com.angel.agendamento_notificacao_api.controller.dto.out.AgendamentoRecordOut;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/agendamento")
-@RequiredArgsConstructor
+
 public class AgendamentoController {
 
 
     private final AgendamentoService agendamentoService;
+
+    public AgendamentoController (AgendamentoService agendamentoService) {
+        this.agendamentoService = agendamentoService;
+    }
 
     @PostMapping
     public ResponseEntity<AgendamentoRecordOut> criarAgendamento (@RequestBody AgendamentoRecord agendamento) {

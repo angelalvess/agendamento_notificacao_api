@@ -21,6 +21,7 @@ public class Agendamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String emailDestinatario;
     private String telefoneDestinatario;
     private String mensagem;
@@ -30,7 +31,7 @@ public class Agendamento {
     private StatusNotificacaoEnum statusNotificacao;
 
     @PrePersist
-    private void prePersist() {
+    private void prePersist () {
         dataHoraAgendamento = LocalDateTime.now();
         statusNotificacao = StatusNotificacaoEnum.AGENDADO;
     }

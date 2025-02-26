@@ -6,15 +6,14 @@ import com.angel.agendamento_notificacao_api.controller.dto.out.AgendamentoRecor
 import com.angel.agendamento_notificacao_api.infrastructure.entities.Agendamento;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
+
 
 import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
 
 @Mapper(componentModel = SPRING)
 public interface IAgendamentoMapper {
 
-    Agendamento paraEntity(AgendamentoRecord agendamento);;
-
+    Agendamento paraEntity(AgendamentoRecord agendamento);
     AgendamentoRecordOut paraOut(Agendamento agendamento);
 
     @Mapping(target = "dataHoraModificado", expression = "java(LocalDateTime.now())")

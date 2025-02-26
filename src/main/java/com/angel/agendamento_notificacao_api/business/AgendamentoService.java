@@ -7,6 +7,7 @@ import com.angel.agendamento_notificacao_api.infrastructure.entities.Agendamento
 import com.angel.agendamento_notificacao_api.infrastructure.exception.NotFoundException;
 import com.angel.agendamento_notificacao_api.infrastructure.repositories.AgendamentoRepository;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class AgendamentoService {
 
-    @Autowired
+
     private final AgendamentoRepository agendamentoRepository;
 
-    @Autowired
     private final IAgendamentoMapper agendamentoMapper;
 
 

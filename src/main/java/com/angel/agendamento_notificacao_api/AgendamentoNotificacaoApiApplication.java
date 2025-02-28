@@ -3,7 +3,7 @@ package com.angel.agendamento_notificacao_api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.angel.agendamento_notificacao_api")
+@SpringBootApplication()
 public class AgendamentoNotificacaoApiApplication {
 
 	public static void main(String[] args) {

@@ -6,27 +6,18 @@ import com.angel.agendamento_notificacao_api.controller.dto.out.AgendamentoRecor
 import com.angel.agendamento_notificacao_api.infrastructure.entities.Agendamento;
 import com.angel.agendamento_notificacao_api.infrastructure.exception.NotFoundException;
 import com.angel.agendamento_notificacao_api.infrastructure.repositories.AgendamentoRepository;
-
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
+@RequiredArgsConstructor
 public class AgendamentoService {
 
 
     private final AgendamentoRepository agendamentoRepository;
 
     private final IAgendamentoMapper agendamentoMapper;
-
-
-    @Autowired
-    public AgendamentoService(AgendamentoRepository agendamentoRepository, IAgendamentoMapper agendamentoMapper) {
-        this.agendamentoRepository = agendamentoRepository;
-        this.agendamentoMapper = agendamentoMapper;
-    }
-
 
 
     public AgendamentoRecordOut criarAgendamento (AgendamentoRecord agendamento) {

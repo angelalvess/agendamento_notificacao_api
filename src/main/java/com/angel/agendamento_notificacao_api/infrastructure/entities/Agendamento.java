@@ -11,7 +11,8 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 
-@Entity(name = "agendamento")
+@Entity
+@Table(name = "agendamento")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

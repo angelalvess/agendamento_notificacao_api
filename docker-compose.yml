@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 3333
+      POSTGRES_PASSWORD: 1234
       POSTGRES_DB: agendamento
     ports:
       - "5432:5432"
@@ -27,7 +27,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/agendamento
       SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: 3333
+      SPRING_DATASOURCE_PASSWORD: 1234
     ports:
       - "8080:8080"
 
